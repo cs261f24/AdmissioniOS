@@ -6,17 +6,46 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		72289BA92CB84B4900349132 /* AdmissioniOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */; };
+		72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA22CB84B4900349132 /* BuildingsView.swift */; };
+		72289BAB2CB84B4900349132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA32CB84B4900349132 /* ContentView.swift */; };
+		72289BAC2CB84B4900349132 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA42CB84B4900349132 /* MainView.swift */; };
+		72289BAD2CB84B4900349132 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA52CB84B4900349132 /* MapView.swift */; };
+		72289BAE2CB84B4900349132 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA62CB84B4900349132 /* MoreView.swift */; };
+		72289BAF2CB84B4900349132 /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA72CB84B4900349132 /* RoutesView.swift */; };
+		72289BB02CB84B4900349132 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72289B9E2CB84B4900349132 /* Preview Assets.xcassets */; };
+		72289BB12CB84B4900349132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72289BA12CB84B4900349132 /* Assets.xcassets */; };
+		72289BB62CB84B7C00349132 /* BuildingsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BB22CB84B7C00349132 /* BuildingsDetail.swift */; };
+		72289BB72CB84B7C00349132 /* BuildingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BB42CB84B7C00349132 /* BuildingsRow.swift */; };
+		72289BB82CB84B7C00349132 /* BuildingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BB32CB84B7C00349132 /* BuildingsList.swift */; };
+		72289BBB2CB84B9A00349132 /* XavierBuildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 72289BB92CB84B9A00349132 /* XavierBuildings.json */; };
+		72289BC52CB84C1500349132 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC32CB84C1500349132 /* ModelData.swift */; };
+		72289BC62CB84C1500349132 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC22CB84C1500349132 /* Building.swift */; };
+		72289BC82CB84C4D00349132 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC72CB84C4D00349132 /* ImageView.swift */; };
+		72289BCA2CB84CD500349132 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC92CB84CD500349132 /* Item.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		72289B832CB84A9000349132 /* AdmissioniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmissioniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72289B9E2CB84B4900349132 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmissioniOSApp.swift; sourceTree = "<group>"; };
+		72289BA12CB84B4900349132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72289BA22CB84B4900349132 /* BuildingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsView.swift; sourceTree = "<group>"; };
+		72289BA32CB84B4900349132 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72289BA42CB84B4900349132 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		72289BA52CB84B4900349132 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		72289BA62CB84B4900349132 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		72289BA72CB84B4900349132 /* RoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesView.swift; sourceTree = "<group>"; };
+		72289BB22CB84B7C00349132 /* BuildingsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsDetail.swift; sourceTree = "<group>"; };
+		72289BB32CB84B7C00349132 /* BuildingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsList.swift; sourceTree = "<group>"; };
+		72289BB42CB84B7C00349132 /* BuildingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsRow.swift; sourceTree = "<group>"; };
+		72289BB92CB84B9A00349132 /* XavierBuildings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XavierBuildings.json; sourceTree = "<group>"; };
+		72289BC22CB84C1500349132 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		72289BC32CB84C1500349132 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		72289BC72CB84C4D00349132 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		72289BC92CB84CD500349132 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		72289B852CB84A9000349132 /* AdmissioniOS */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AdmissioniOS;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		72289B802CB84A9000349132 /* Frameworks */ = {
@@ -32,7 +61,7 @@
 		72289B7A2CB84A9000349132 = {
 			isa = PBXGroup;
 			children = (
-				72289B852CB84A9000349132 /* AdmissioniOS */,
+				72289BA82CB84B4900349132 /* AdmissioniOS */,
 				72289B842CB84A9000349132 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +72,62 @@
 				72289B832CB84A9000349132 /* AdmissioniOS.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		72289B9F2CB84B4900349132 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				72289B9E2CB84B4900349132 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		72289BA82CB84B4900349132 /* AdmissioniOS */ = {
+			isa = PBXGroup;
+			children = (
+				72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */,
+				72289BA42CB84B4900349132 /* MainView.swift */,
+				72289BA22CB84B4900349132 /* BuildingsView.swift */,
+				72289BB52CB84B7C00349132 /* BuildingsView */,
+				72289BA52CB84B4900349132 /* MapView.swift */,
+				72289BA32CB84B4900349132 /* ContentView.swift */,
+				72289BA62CB84B4900349132 /* MoreView.swift */,
+				72289BC72CB84C4D00349132 /* ImageView.swift */,
+				72289BA72CB84B4900349132 /* RoutesView.swift */,
+				72289BC42CB84C1500349132 /* Model */,
+				72289BBA2CB84B9A00349132 /* Resources */,
+				72289BA12CB84B4900349132 /* Assets.xcassets */,
+				72289B9F2CB84B4900349132 /* Preview Content */,
+			);
+			path = AdmissioniOS;
+			sourceTree = "<group>";
+		};
+		72289BB52CB84B7C00349132 /* BuildingsView */ = {
+			isa = PBXGroup;
+			children = (
+				72289BB22CB84B7C00349132 /* BuildingsDetail.swift */,
+				72289BB32CB84B7C00349132 /* BuildingsList.swift */,
+				72289BB42CB84B7C00349132 /* BuildingsRow.swift */,
+			);
+			path = BuildingsView;
+			sourceTree = "<group>";
+		};
+		72289BBA2CB84B9A00349132 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72289BB92CB84B9A00349132 /* XavierBuildings.json */,
+				72289BC92CB84CD500349132 /* Item.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		72289BC42CB84C1500349132 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72289BC22CB84C1500349132 /* Building.swift */,
+				72289BC32CB84C1500349132 /* ModelData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +144,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				72289B852CB84A9000349132 /* AdmissioniOS */,
 			);
 			name = AdmissioniOS;
 			packageProductDependencies = (
@@ -109,6 +191,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72289BBB2CB84B9A00349132 /* XavierBuildings.json in Resources */,
+				72289BB02CB84B4900349132 /* Preview Assets.xcassets in Resources */,
+				72289BB12CB84B4900349132 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +204,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72289BC52CB84C1500349132 /* ModelData.swift in Sources */,
+				72289BC62CB84C1500349132 /* Building.swift in Sources */,
+				72289BA92CB84B4900349132 /* AdmissioniOSApp.swift in Sources */,
+				72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */,
+				72289BCA2CB84CD500349132 /* Item.swift in Sources */,
+				72289BC82CB84C4D00349132 /* ImageView.swift in Sources */,
+				72289BAB2CB84B4900349132 /* ContentView.swift in Sources */,
+				72289BAC2CB84B4900349132 /* MainView.swift in Sources */,
+				72289BAD2CB84B4900349132 /* MapView.swift in Sources */,
+				72289BB62CB84B7C00349132 /* BuildingsDetail.swift in Sources */,
+				72289BB72CB84B7C00349132 /* BuildingsRow.swift in Sources */,
+				72289BB82CB84B7C00349132 /* BuildingsList.swift in Sources */,
+				72289BAE2CB84B4900349132 /* MoreView.swift in Sources */,
+				72289BAF2CB84B4900349132 /* RoutesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
