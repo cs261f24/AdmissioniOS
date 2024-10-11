@@ -23,6 +23,12 @@ struct MapView: View {
         Map(position: $cameraPosition, interactionModes: .all) {
             // Display the user location annotation
             UserAnnotation()
+            Marker("Schott Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14749516485998, longitude: -84.47589391133172))
+            Marker("Schott Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14749516485998, longitude: -84.47589391133172))
+            Marker("Schott Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14749516485998, longitude: -84.47589391133172))
+            Marker("Schott Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14749516485998, longitude: -84.47589391133172))
+            Marker("Schott Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14749516485998, longitude: -84.47589391133172))
+            Marker("Schott Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14749516485998, longitude: -84.47589391133172))
         }
         
         .onAppear {

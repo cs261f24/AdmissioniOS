@@ -45,6 +45,7 @@
 		72289BC32CB84C1500349132 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		72289BC72CB84C4D00349132 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		72289BC92CB84CD500349132 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EB65C4F82CB99A97008B84C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 		72289BA82CB84B4900349132 /* AdmissioniOS */ = {
 			isa = PBXGroup;
 			children = (
+				EB65C4F82CB99A97008B84C9 /* Info.plist */,
 				72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */,
 				72289BA42CB84B4900349132 /* MainView.swift */,
 				72289BA22CB84B4900349132 /* BuildingsView.swift */,
@@ -353,6 +355,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AdmissioniOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdmissioniOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -381,6 +384,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AdmissioniOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdmissioniOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
