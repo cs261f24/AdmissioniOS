@@ -22,6 +22,7 @@ struct BuildingsDetail: View {
             VStack(alignment: .leading) {
                 Text(building.name)
                     .font(.title)
+                    .bold()
                 
                 Divider()
                 
@@ -29,6 +30,8 @@ struct BuildingsDetail: View {
                     .font(.title2)
                 Text("")
                 Text(building.description)
+                Spacer()
+                Text("Year Built: \(building.year_built)")
             }
             .navigationTitle("Landmarks")
             .padding()
@@ -41,6 +44,6 @@ struct BuildingsDetail: View {
 }
 
 #Preview {
-    BuildingsDetail(building: buildings[1])
+    BuildingsDetail(building: buildings[22])
 }
 

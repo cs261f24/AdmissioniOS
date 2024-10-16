@@ -26,8 +26,8 @@ struct BuildingsList: View {
                     }
                 }
             }
-        }
-        detail: {
+            .navigationTitle("Buildings")
+        } detail: {
             Text("Buildings")
         }
         
