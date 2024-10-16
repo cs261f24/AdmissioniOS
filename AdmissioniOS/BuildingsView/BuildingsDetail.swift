@@ -1,27 +1,46 @@
 //
-//  BuildingsDetail.swift
-//  XavierMapApp
+// BuildingsDetail.swift
 //
-//  Created by Simon Benjamin on 10/8/24.
+// Created by Simon Benjamin on 10/8/24.
 //
-/*
+//
 import SwiftUI
-
-struct BuildingsDetail: View {
-    @Environment(ModelData.self) var modelData
-    var building: Building
-    var buildingIndex: Int {
-        modelData.building.firstIndex(where: { $0.id == building.id })!
-    }
     
+struct BuildingsDetail: View {
+    
+    var building: Building
     
     var body: some View {
-        @Bindable var modelData = modelData
-        Text("Hello World")
+
+        
+    NavigationSplitView {
+            
+            ImageView(building: building)
+                .frame(width: 450, height: 500)
+                .offset(y: -65)
+            
+            VStack(alignment: .leading) {
+                Text(building.name)
+                    .font(.title)
+                
+                Divider()
+                
+                Text("About \(building.name)")
+                    .font(.title2)
+                Text("")
+                Text(building.description)
+            }
+            
+            .padding()
+            
+    } detail: {
+        Text("")
+    }
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    BuildingsDetail()
+    BuildingsDetail(building: buildings[1])
 }
-*/
+

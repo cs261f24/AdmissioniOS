@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct ImageView: View {
+    
+    var building: Building
+    
     var body: some View {
-        Text("Hello World")
+        AsyncImage(url: URL(string: building.image_url)) { image in
+            image.resizable()
+            
+        }
+        placeholder: {
+            ProgressView()
+        }
+        
     }
 }
 
 #Preview {
-    ImageView()
+    ImageView(building: buildings[1])
 }

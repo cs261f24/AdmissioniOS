@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BuildingsView: View {
+    
     var body: some View {
         BuildingsList()
     }
