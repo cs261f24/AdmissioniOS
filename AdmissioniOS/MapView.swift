@@ -52,12 +52,12 @@ struct MapView: View {
                                 Marker("Smith Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14751604899918, longitude: -84.47393246761132))
                                 Marker("Conaton Learning Commons", coordinate: CLLocationCoordinate2D(latitude: 39.147754692022325, longitude: -84.47509058236443))
 
-               // Wrap markers in naviagtion link for direct naviagtion
-                    // is currently giving an error saying that buidlingsdetail
-                    // isn't in scope. This is because BuildingsView hasn't been
-                    // defined yet
-               // NavigationLink(destination: BuildingsDetail()) {
-                 //   Marker("Schott Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14749516485998, longitude: -84.47589391133172))
+                // Wrap markers in naviagtion link for direct naviagtion
+                     // is currently giving an error saying that buidlingsdetail
+                     // isn't in scope. This is because BuildingsView hasn't been
+                     // defined yet
+                 //NavigationLink(destination: BuildingsDetail()) {
+                    //Marker("Schott Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14749516485998, longitude: -84.47589391133172))
                 //}
             }
            

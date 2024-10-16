@@ -13,11 +13,11 @@ struct BuildingsDetail: View {
     var body: some View {
 
         
-    NavigationSplitView {
+        ScrollView {
             
             ImageView(building: building)
                 .frame(width: 450, height: 500)
-                .offset(y: -65)
+                //.offset(y: -65)
             
             VStack(alignment: .leading) {
                 Text(building.name)
@@ -25,18 +25,18 @@ struct BuildingsDetail: View {
                 
                 Divider()
                 
-                Text("About \(building.name)")
+                Text("Information")
                     .font(.title2)
                 Text("")
                 Text(building.description)
             }
-            
+            .navigationTitle("Landmarks")
             .padding()
+            .frame(width: 410)
             
-    } detail: {
-        Text("")
-    }
-            .navigationBarTitleDisplayMode(.inline)
+        }
+        .navigationTitle(building.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
