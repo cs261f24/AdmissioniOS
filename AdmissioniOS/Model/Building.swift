@@ -13,7 +13,7 @@ struct Building: Hashable, Codable, Identifiable {
     
     var id: Int
     var name: String
-    var year_built: Int
+    var year_built: String
     var description: String
     var image_url: String
     
