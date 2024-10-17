@@ -18,4 +18,6 @@ struct BuildingsView: View {
 
 #Preview {
     BuildingsView()
+        .environment(ModelData())
 }
+

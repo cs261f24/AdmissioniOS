@@ -25,15 +25,20 @@ struct BuildingsRow: View {
             
         Spacer()
         
+        if building.isFavorite {
+            Image(systemName: "star.fill")
+                .foregroundStyle(.yellow)
+            }
+        
         }
     }
 }
 
 
 #Preview {
-    
-        BuildingsRow(building: buildings[0])
-        BuildingsRow(building: buildings[1])
+    let buildings = ModelData().buildings
+    BuildingsRow(building: buildings[0])
+    BuildingsRow(building: buildings[1])
     
     
 }
