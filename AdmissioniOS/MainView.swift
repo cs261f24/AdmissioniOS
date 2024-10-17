@@ -22,7 +22,7 @@ struct MainView: View {
                     Text("Routes")
                 }
             
-            BuildingsView()
+            BuildingsList()
                 .tabItem() {
                     Image(systemName: "building.columns.fill")
                     Text("Buildings")
@@ -46,4 +46,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environment(ModelData())
 }

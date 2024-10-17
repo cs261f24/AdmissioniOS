@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+// Combines BuildingsDetail, BuildingsList, and BuildingsRow to
+// create the overall buildings view.
 struct BuildingsView: View {
+    
     var body: some View {
         BuildingsList()
     }
@@ -15,4 +18,6 @@ struct BuildingsView: View {
 
 #Preview {
     BuildingsView()
+        .environment(ModelData())
 }
+
