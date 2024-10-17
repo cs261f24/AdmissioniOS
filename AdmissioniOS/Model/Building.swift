@@ -4,6 +4,10 @@
 //
 //  Created by Simon Benjamin on 10/2/24.
 //
+/*
+ Building.swift decodes the XavierBuildings.json file and creates a Building structure out of the information
+ */
+
 
 import Foundation
 import SwiftUI
@@ -16,6 +20,7 @@ struct Building: Hashable, Codable, Identifiable {
     var year_built: String
     var description: String
     var image_url: String
+    var isFavorite: Bool
     
     private var coordinates: Coordinates
     

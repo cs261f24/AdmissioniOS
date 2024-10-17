@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		721F925C2CC16BE900CE2231 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F925B2CC16BE900CE2231 /* FavoriteButton.swift */; };
 		72289BA92CB84B4900349132 /* AdmissioniOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */; };
 		72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA22CB84B4900349132 /* BuildingsView.swift */; };
 		72289BAB2CB84B4900349132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA32CB84B4900349132 /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		721F925B2CC16BE900CE2231 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		72289B832CB84A9000349132 /* AdmissioniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmissioniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72289B9E2CB84B4900349132 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmissioniOSApp.swift; sourceTree = "<group>"; };
@@ -59,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		721F925A2CC16B8F00CE2231 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				72289BC72CB84C4D00349132 /* ImageView.swift */,
+				72289BA52CB84B4900349132 /* MapView.swift */,
+				721F925B2CC16BE900CE2231 /* FavoriteButton.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		72289B7A2CB84A9000349132 = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +103,10 @@
 				72289BA42CB84B4900349132 /* MainView.swift */,
 				72289BA22CB84B4900349132 /* BuildingsView.swift */,
 				72289BB52CB84B7C00349132 /* BuildingsView */,
-				72289BA52CB84B4900349132 /* MapView.swift */,
 				72289BA32CB84B4900349132 /* ContentView.swift */,
 				72289BA62CB84B4900349132 /* MoreView.swift */,
-				72289BC72CB84C4D00349132 /* ImageView.swift */,
 				72289BA72CB84B4900349132 /* RoutesView.swift */,
+				721F925A2CC16B8F00CE2231 /* Helpers */,
 				72289BC42CB84C1500349132 /* Model */,
 				72289BBA2CB84B9A00349132 /* Resources */,
 				72289BA12CB84B4900349132 /* Assets.xcassets */,
@@ -209,6 +220,7 @@
 				72289BC52CB84C1500349132 /* ModelData.swift in Sources */,
 				72289BC62CB84C1500349132 /* Building.swift in Sources */,
 				72289BA92CB84B4900349132 /* AdmissioniOSApp.swift in Sources */,
+				721F925C2CC16BE900CE2231 /* FavoriteButton.swift in Sources */,
 				72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */,
 				72289BCA2CB84CD500349132 /* Item.swift in Sources */,
 				72289BC82CB84C4D00349132 /* ImageView.swift in Sources */,

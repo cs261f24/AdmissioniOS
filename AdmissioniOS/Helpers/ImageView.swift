@@ -24,5 +24,6 @@ struct ImageView: View {
 }
 
 #Preview {
+    let buildings = ModelData().buildings
     ImageView(building: buildings[1])
 }
