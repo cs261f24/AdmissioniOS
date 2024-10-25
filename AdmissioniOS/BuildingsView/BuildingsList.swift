@@ -32,6 +32,7 @@ struct BuildingsList: View {
                 ForEach(filteredBuildings) { Building in
                     NavigationLink {
                         BuildingsDetail(building: Building)
+                            .offset(y: -65)
                     }
                     label: {
                         BuildingsRow(building: Building)

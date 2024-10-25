@@ -20,7 +20,8 @@ struct BuildingsDetail: View {
         ScrollView {
             
             ImageView(building: building)
-                .frame(width: 450, height: 500)
+                .frame(width: 380, height: 400)
+                .cornerRadius(6.0)
                 //.offset(y: -65)
             
             VStack(alignment: .leading) {
@@ -40,19 +41,16 @@ struct BuildingsDetail: View {
                 Spacer()
                 Text("Year Built: \(building.year_built)")
             }
-            .navigationTitle("Landmarks")
             .padding()
             .frame(width: 410)
             
         }
-        .navigationTitle(building.name)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
     let modelData = ModelData()
-    return BuildingsDetail(building: ModelData().buildings[0])
+    return BuildingsDetail(building: ModelData().buildings[1])
         .environment(modelData)
 }
 

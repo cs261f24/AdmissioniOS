@@ -11,6 +11,7 @@ import Foundation
 @Observable
 class ModelData {
     var buildings: [Building] = load("XavierBuildings.json")
+    var colleges: [Colleges] = load("Routes.json")
 }
 
 

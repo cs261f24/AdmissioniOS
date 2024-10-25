@@ -15,6 +15,7 @@ struct BuildingsRow: View {
         HStack {
             AsyncImage(url: URL(string: building.image_url)) { image in
                 image.resizable()
+                    .cornerRadius(4.0)
             }
             placeholder: {
                 ProgressView()
