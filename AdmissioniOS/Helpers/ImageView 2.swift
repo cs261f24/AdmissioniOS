@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ImageView: View {
+    
+    var building: Building
+    
     var body: some View {
         Text("Hello World")
     }

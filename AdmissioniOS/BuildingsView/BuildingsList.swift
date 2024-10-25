@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct BuildingsList: View {
+    @Environment(ModelData.self) var modelData
+    @State private var showFavoritesOnly = false
+    
+    var filteredBuildings: [Building] {
+        modelData.buildings.filter { building in
+            (!showFavoritesOnly || building.isFavorite)
+        }
+    }
+    
+    
     var body: some View {
         
         NavigationSplitView {
@@ -37,4 +47,5 @@ struct BuildingsList: View {
 
 #Preview {
     BuildingsList()
+        .environment(ModelData())
 }

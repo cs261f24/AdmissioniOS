@@ -22,12 +22,20 @@ struct BuildingsRow: View {
             }
             .frame(width: 50, height: 50)
             .padding(.trailing, 10)
-        Text(building.name)
-
+            Text(building.name)
+            
+            Spacer()
+            
+        }
     }
 }
 
 #Preview {
-    BuildingsRow(building: buildings[0])
-    BuildingsRow(building: buildings[1])
+    let buildings = ModelData().buildings
+    return Group {
+        BuildingsRow(building: buildings[0])
+        BuildingsRow(building: buildings[1])
+    }
+    
 }
+

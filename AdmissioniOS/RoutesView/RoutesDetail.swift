@@ -44,15 +44,12 @@ struct RoutesDetail: View {
                 
                 
             }
-            .navigationTitle("Colleges")
             .padding()
             .frame(width: 410)
             ImageViewTwo(college: college)
                 .frame(width: 380, height: 400)
                 .cornerRadius(10.0)
         }
-        .navigationTitle(college.name)
-        .navigationBarTitleDisplayMode(.inline)
             
     }
 }

@@ -25,8 +25,8 @@
 		72289BBB2CB84B9A00349132 /* XavierBuildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 72289BB92CB84B9A00349132 /* XavierBuildings.json */; };
 		72289BC52CB84C1500349132 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC32CB84C1500349132 /* ModelData.swift */; };
 		72289BC62CB84C1500349132 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC22CB84C1500349132 /* Building.swift */; };
-		72289BC82CB84C4D00349132 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC72CB84C4D00349132 /* ImageView.swift */; };
 		72289BCA2CB84CD500349132 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC92CB84CD500349132 /* Item.swift */; };
+		727C0A4B2CCC1E9100F39550 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C0A4A2CCC1E9100F39550 /* ImageView.swift */; };
 		72CA8A6E2CC812CF006E7B39 /* Routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 72CA8A6D2CC812CF006E7B39 /* Routes.json */; };
 		72CA8A722CC81BF8006E7B39 /* RoutesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA8A712CC81BF8006E7B39 /* RoutesList.swift */; };
 		72CA8A742CC81CCA006E7B39 /* RoutesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA8A732CC81CCA006E7B39 /* RoutesDetail.swift */; };
@@ -53,8 +53,8 @@
 		72289BB92CB84B9A00349132 /* XavierBuildings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XavierBuildings.json; sourceTree = "<group>"; };
 		72289BC22CB84C1500349132 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		72289BC32CB84C1500349132 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		72289BC72CB84C4D00349132 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		72289BC92CB84CD500349132 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		727C0A4A2CCC1E9100F39550 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		72CA8A6D2CC812CF006E7B39 /* Routes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Routes.json; sourceTree = "<group>"; };
 		72CA8A712CC81BF8006E7B39 /* RoutesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesList.swift; sourceTree = "<group>"; };
 		72CA8A732CC81CCA006E7B39 /* RoutesDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesDetail.swift; sourceTree = "<group>"; };
@@ -76,9 +76,8 @@
 		721F925A2CC16B8F00CE2231 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				72289BC72CB84C4D00349132 /* ImageView.swift */,
 				72CA8A752CCAC061006E7B39 /* ImageViewTwo.swift */,
-				72289BA52CB84B4900349132 /* MapView.swift */,
+				727C0A4A2CCC1E9100F39550 /* ImageView.swift */,
 				721F925B2CC16BE900CE2231 /* FavoriteButton.swift */,
 			);
 			path = Helpers;
@@ -129,7 +128,6 @@
 				72289BA52CB84B4900349132 /* MapView.swift */,
 				72289BA32CB84B4900349132 /* ContentView.swift */,
 				72289BA62CB84B4900349132 /* MoreView.swift */,
-				72289BC72CB84C4D00349132 /* ImageView.swift */,
 				72289BA72CB84B4900349132 /* RoutesView.swift */,
 				721F925F2CC2E80400CE2231 /* RoutesView */,
 				721F925A2CC16B8F00CE2231 /* Helpers */,
@@ -254,10 +252,10 @@
 				721F92612CC2E81B00CE2231 /* RoutesRow.swift in Sources */,
 				72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */,
 				72289BCA2CB84CD500349132 /* Item.swift in Sources */,
-				72289BC82CB84C4D00349132 /* ImageView.swift in Sources */,
 				72289BAB2CB84B4900349132 /* ContentView.swift in Sources */,
 				72289BAC2CB84B4900349132 /* MainView.swift in Sources */,
 				72CA8A722CC81BF8006E7B39 /* RoutesList.swift in Sources */,
+				727C0A4B2CCC1E9100F39550 /* ImageView.swift in Sources */,
 				72CA8A742CC81CCA006E7B39 /* RoutesDetail.swift in Sources */,
 				72289BAD2CB84B4900349132 /* MapView.swift in Sources */,
 				72289BB62CB84B7C00349132 /* BuildingsDetail.swift in Sources */,

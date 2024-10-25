@@ -9,6 +9,9 @@ import SwiftData
 
 @main
 struct AdmissioniOSApp: App {
+    
+    @State private var modelData = ModelData()
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -25,6 +28,7 @@ struct AdmissioniOSApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environment(modelData)
         }
         .modelContainer(sharedModelContainer)
     }
