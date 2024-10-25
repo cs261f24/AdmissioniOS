@@ -1,16 +1,17 @@
 //
-// BuildingsDetail.swift
+//  BuildingsDetail.swift
+//  XavierMapApp
 //
-// Created by Simon Benjamin on 10/8/24.
+//  Created by Simon Benjamin on 10/8/24.
 //
-//
+/*
 import SwiftUI
-    
+
 struct BuildingsDetail: View {
     @Environment(ModelData.self) var modelData
     var building: Building
-    var buildingsIndex: Int {
-        modelData.buildings.firstIndex(where: { $0.id == building.id })!
+    var buildingIndex: Int {
+        modelData.building.firstIndex(where: { $0.id == building.id })!
     }
     
     
@@ -56,4 +57,4 @@ struct BuildingsDetail: View {
     return BuildingsDetail(building: ModelData().buildings[1])
         .environment(modelData)
 }
-
+*/

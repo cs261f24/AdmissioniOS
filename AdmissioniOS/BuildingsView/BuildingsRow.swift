@@ -23,23 +23,11 @@ struct BuildingsRow: View {
             .frame(width: 50, height: 50)
             .padding(.trailing, 10)
         Text(building.name)
-            
-        Spacer()
-        
-        if building.isFavorite {
-            Image(systemName: "star.fill")
-                .foregroundStyle(.yellow)
-            }
-        
-        }
+
     }
 }
 
-
 #Preview {
-    let buildings = ModelData().buildings
     BuildingsRow(building: buildings[0])
     BuildingsRow(building: buildings[1])
-    
-    
 }
