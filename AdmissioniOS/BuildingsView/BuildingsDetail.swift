@@ -41,10 +41,13 @@ struct BuildingsDetail: View {
                 Spacer()
                 Text("Year Built: \(building.year_built)")
             }
+            .navigationTitle("Landmarks")
             .padding()
             .frame(width: 410)
             
         }
+        .navigationTitle(building.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
