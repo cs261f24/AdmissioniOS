@@ -90,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */,
-				72289BA42CB84B4900349132 /* MainView.swift */,
 				EAD4C07C2CC1876200D83FC5 /* WelcomeView.swift */,
+				72289BA42CB84B4900349132 /* MainView.swift */,
 				72289BA22CB84B4900349132 /* BuildingsView.swift */,
 				72289BB52CB84B7C00349132 /* BuildingsView */,
 				72289BA52CB84B4900349132 /* MapView.swift */,
