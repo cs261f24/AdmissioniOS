@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71C795C52CCC166700AB0C92 /* BuildingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C795C42CCC166700AB0C92 /* BuildingViewModel.swift */; };
 		72289BA92CB84B4900349132 /* AdmissioniOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */; };
 		72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA22CB84B4900349132 /* BuildingsView.swift */; };
 		72289BAB2CB84B4900349132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA32CB84B4900349132 /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71C795C42CCC166700AB0C92 /* BuildingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewModel.swift; sourceTree = "<group>"; };
 		72289B832CB84A9000349132 /* AdmissioniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmissioniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72289B9E2CB84B4900349132 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmissioniOSApp.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				72289BBA2CB84B9A00349132 /* Resources */,
 				72289BA12CB84B4900349132 /* Assets.xcassets */,
 				72289B9F2CB84B4900349132 /* Preview Content */,
+				71C795C42CCC166700AB0C92 /* BuildingViewModel.swift */,
 			);
 			path = AdmissioniOS;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				72289BA92CB84B4900349132 /* AdmissioniOSApp.swift in Sources */,
 				72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */,
 				72289BCA2CB84CD500349132 /* Item.swift in Sources */,
+				71C795C52CCC166700AB0C92 /* BuildingViewModel.swift in Sources */,
 				72289BC82CB84C4D00349132 /* ImageView.swift in Sources */,
 				72289BAB2CB84B4900349132 /* ContentView.swift in Sources */,
 				72289BAC2CB84B4900349132 /* MainView.swift in Sources */,
