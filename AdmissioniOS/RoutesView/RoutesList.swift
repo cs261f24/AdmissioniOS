@@ -1,25 +1,23 @@
 //
-//  BuildingsList.swift
-//  XavierMapApp
+//  RoutesList.swift
+//  AdmissioniOS
 //
-//  Created by Simon Benjamin on 10/7/24.
+//  Created by Simon Benjamin on 10/22/24.
 //
 
 import SwiftUI
 
-struct BuildingsList: View {
+struct RoutesList: View {
     @Environment(ModelData.self) var modelData
     @State private var showFavoritesOnly = false
     
-    var filteredBuildings: [Building] {
-        modelData.buildings.filter { building in
-            (!showFavoritesOnly || building.isFavorite)
+    var filteredColleges: [Colleges] {
+        modelData.colleges.filter { colleges in
+            (!showFavoritesOnly || colleges.isFavorite)
+            }
         }
-    }
-    
     
     var body: some View {
-        
         NavigationSplitView {
             List {
                 
@@ -27,25 +25,25 @@ struct BuildingsList: View {
                     Text("Favorites only")
                 }
                 
-                ForEach(filteredBuildings) { Building in
+                ForEach(filteredColleges) { Colleges in
                     NavigationLink {
-                        BuildingsDetail(building: Building)
+                        RoutesDetail(college: Colleges)
                             .offset(y: -65)
                     }
                     label: {
-                        BuildingsRow(building: Building)
+                        RoutesRow(college: Colleges)
                     }
                 }
             }
-            .animation(.default, value: filteredBuildings)
-            .navigationTitle("Buildings")
+            .animation(.default, value: filteredColleges)
+            .navigationTitle("Routes")
         } detail: {
-            Text("Buildings")
+            Text("Routes")
         }
     }
 }
-
 #Preview {
-    BuildingsList()
+    RoutesList()
         .environment(ModelData())
+
 }
