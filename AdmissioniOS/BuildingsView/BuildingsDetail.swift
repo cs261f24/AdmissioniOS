@@ -46,6 +46,7 @@ struct BuildingsDetail: View {
             
         }
     }
+    
 }
 
 #Preview {
