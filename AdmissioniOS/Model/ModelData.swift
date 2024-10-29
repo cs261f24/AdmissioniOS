@@ -7,7 +7,13 @@
 
 import Foundation
 
-var buildings: [Building] = load("XavierBuildings.json")
+
+@Observable
+class ModelData {
+    var buildings: [Building] = load("XavierBuildings.json")
+    var colleges: [Colleges] = load("Routes.json")
+}
+
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
