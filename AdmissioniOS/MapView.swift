@@ -134,7 +134,6 @@ struct MapView: View {
                             }
                             if buildings.contains("Conaton Learning Commons") {
                                 Marker("Conaton Learning Commons", coordinate: CLLocationCoordinate2D(latitude: 39.147754692022325, longitude: -84.47509058236443))
-<<<<<<< HEAD:AdmissioniOS/MapView.swift
                             }
                         }
                     }
@@ -160,33 +159,6 @@ struct MapView: View {
                         MapPitchToggle() //Toggle 2D/3D view
                     }
                 }
-=======
-
-                // Wrap markers in naviagtion link for direct naviagtion
-                     // is currently giving an error saying that buidlingsdetail
-                     // isn't in scope. This is because BuildingsView hasn't been
-                     // defined yet
-                 //NavigationLink(destination: BuildingsDetail()) {
-                    //Marker("Schott Hall", coordinate: CLLocationCoordinate2D(latitude: 39.14749516485998, longitude: -84.47589391133172))
-                //}
-            }
-           
-        }
-        
-        .onAppear {
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
-        }
-        .onReceive(locationManager.$userLocation) { newLocation in
-            if let newLocation = newLocation {
-                // Update the camera to the user's current location
-                cameraPosition = .region(
-                    MKCoordinateRegion(
-                        center: newLocation,
-                        span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.002)
-                    )
-                )
->>>>>>> main:AdmissioniOS/Helpers/MapView.swift
             }
         }
     }

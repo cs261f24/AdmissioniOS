@@ -9,6 +9,7 @@ import SwiftData
 
 @main
 struct AdmissioniOSApp: App {
+    
     @State private var modelData = ModelData()
     
     var sharedModelContainer: ModelContainer = {

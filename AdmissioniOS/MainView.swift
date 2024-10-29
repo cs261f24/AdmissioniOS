@@ -22,7 +22,7 @@ struct MainView: View {
                     Text("Routes")
                 }
             
-            BuildingsList()
+            BuildingsView()
                 .tabItem() {
                     Image(systemName: "building.columns.fill")
                     Text("Buildings")

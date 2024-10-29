@@ -11,6 +11,7 @@ import Foundation
 @Observable
 class ModelData {
     var buildings: [Building] = load("XavierBuildings.json")
+    var colleges: [Colleges] = load("Routes.json")
 }
 
 
@@ -19,8 +20,8 @@ func load<T: Decodable>(_ filename: String) -> T {
 
 
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-        else {
-            fatalError("Couldn't find \(filename) in main bundle.")
+    else {
+        fatalError("Couldn't find \(filename) in main bundle.")
     }
 
 
