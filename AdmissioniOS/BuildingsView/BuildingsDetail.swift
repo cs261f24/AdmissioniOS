@@ -45,6 +45,9 @@ struct BuildingsDetail: View {
             .frame(width: 390)
             
         }
+        .offset(y: 60)
+        .navigationTitle(building.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
     
 }

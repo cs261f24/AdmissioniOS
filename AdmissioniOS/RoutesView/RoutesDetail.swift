@@ -22,6 +22,9 @@ struct RoutesDetail: View {
             
             VStack(alignment: .leading) {
                 
+                FavoriteButton(isSet: $modelData.colleges[collegesIndex].isFavorite)
+                    .position(x: 365)
+                
                 HStack {
                     
                     Text(college.name)
@@ -30,8 +33,6 @@ struct RoutesDetail: View {
                     Spacer()
                 }
                 
-                FavoriteButton(isSet: $modelData.colleges[collegesIndex].isFavorite)
-                    .position(x: 365)
                 
                 Divider()
                 
@@ -53,6 +54,8 @@ struct RoutesDetail: View {
                 .cornerRadius(10.0)
         }
         .offset(y: 50)
+        .navigationTitle(college.name)
+        .navigationBarTitleDisplayMode(.inline)
             
     }
 }
