@@ -18,11 +18,11 @@ enum College: String, CaseIterable {
 }
 
 let collegeToBuildings: [College: [String]] = [
-    .GeneralTour: ["Albers Hall", "Schott Hall", "Our Lady Of Peace Chapel", "Edgecliff Hall", "Schmidt Hall", "Hinkle Hall", "McDonald Library", "Alter Hall", "Logan Hall", "Lindner Family Physics Building", "Hailstones Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Smith Hall", "Conaton Learning Commons"],
-    .CollegeofArtsandSciences: ["Smith Hall"],
-    .WilliamsCollegeofBusiness: ["Edgecliff Hall"],
-    .CollegeofProfessionalSciences: ["Logan Hall"],
-    .CollegeofNursing: ["Cohen Center", "Health United Building (HUB)"]
+    .GeneralTour: ["Schott Hall", "Our Lady Of Peace Chapel", "Edgecliff Hall", "Schmidt Hall", "Hinkle Hall", "McDonald Library", "Alter Hall","Albers Hall", "Logan Hall", "Lindner Family Physics Building", "Hailstones Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Smith Hall", "Conaton Learning Commons"],
+    .CollegeofArtsandSciences: ["Schott Hall", "Our Lady Of Peace Chapel", "Edgecliff Hall", "Schmidt Hall", "Hinkle Hall", "McDonald Library", "Alter Hall", "Albers Hall", "Logan Hall", "Lindner Family Physics Building", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Flynn Hall", "Hoff Dining Commons", "Conaton Learning Commons"],
+    .WilliamsCollegeofBusiness: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Flynn Hall", "Hoff Dining Commons", "Smith Hall", "Conaton Learning Commons"],
+    .CollegeofProfessionalSciences: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Conaton Learning Commons"],
+    .CollegeofNursing: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Conaton Learning Commons"]
 ]
 
 struct MapView: View {
@@ -41,23 +41,26 @@ struct MapView: View {
     @State private var selectedCollege: College = .GeneralTour
     
     var body: some View {
-        VStack {
-            // College Picker
-
+        ZStack{
+            
+            VStack {
+                // College Picker
+                
                 Picker("Select College", selection: $selectedCollege) {
                     ForEach(College.allCases, id: \.self) { college in
                         Text(college.rawValue).tag(college)
                     }
-
+                    
                 }
                 .pickerStyle(MenuPickerStyle())
                 
                 
-            
+                
                 
                 
                 NavigationStack {
                     Map(position: $cameraPosition, interactionModes: .all) {
+                        
                         // Display the user location annotation
                         UserAnnotation()
                         
@@ -162,7 +165,7 @@ struct MapView: View {
             }
         }
     }
-
+}
 
 // Simple Location Manager class to handle location services
 class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
