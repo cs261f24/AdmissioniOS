@@ -21,15 +21,18 @@ struct RoutesDetail: View {
         ScrollView {
             
             VStack(alignment: .leading) {
+                
+                FavoriteButton(isSet: $modelData.colleges[collegesIndex].isFavorite)
+                    .position(x: 365)
+                
                 HStack {
-                        
+                    
                     Text(college.name)
                         .font(.title)
                         .bold()
                     Spacer()
-                    FavoriteButton(isSet: $modelData.buildings[collegesIndex].isFavorite)
-                    
                 }
+                
                 
                 Divider()
                 
@@ -50,12 +53,15 @@ struct RoutesDetail: View {
                 .frame(width: 380, height: 400)
                 .cornerRadius(10.0)
         }
+        .offset(y: 50)
+        .navigationTitle(college.name)
+        .navigationBarTitleDisplayMode(.inline)
             
     }
 }
 
 #Preview {
     let modelData = ModelData()
-    RoutesDetail(college: ModelData().colleges[0])
+    RoutesDetail(college: ModelData().colleges[1])
         .environment(modelData)
 }
