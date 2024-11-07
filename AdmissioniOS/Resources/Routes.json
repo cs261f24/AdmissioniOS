@@ -1,0 +1,43 @@
+[
+    {
+        "id": 0,
+        "name": "College of Arts and Sciences",
+        "description": "The College of Arts and Sciences is the oldest and largest college at Xavier University. The college provides an excellent liberal arts education in the Jesuit tradition that prepares students for careers, professional or graduate school, and life in a global society.",
+        "buildings": "Albers Hall, Alter Hall, Edgecliff Hall, Lindner Family Physics Building, Logan Hall",
+        "buildings1": ["Albers Hall", "Alter Hall", "Edgecliff Hall", "Lindner Family Physics Building", "Logan Hall"],
+        "isFeatured": false,
+        "isFavorite": false,
+        "image_url": "https://www.xavier.edu/cas/images/41.jpeg",
+        "logo": "theatermask.and.paintbrush.fill"
+    },
+    {
+        "id": 1,
+        "name": "Williams College of Business",
+        "description": "Ranked among the best undergraduate business schools in the nation according to US News & World Report, the Williams College of Business offers 8 undergraduate majors, as well as four master’s degrees, including a Master of Business Administration.",
+        "buildings": "Alter Hall, Smith Hall",
+        "isFeatured": false,
+        "isFavorite": false,
+        "image_url": "https://www.xavier.edu/williams/images/wcb-undergrad.jpg",
+        "logo": "rectangle.and.text.magnifyingglass"
+    },
+    {
+        "id": 2,
+        "name": "College of Nursing",
+        "description": "Whether you’ve always wanted to be a nurse or recently felt called to become an RN, our second-degree Accelerated BSN program in Cincinnati, Columbus or Cleveland can connect you with that path in 16 months.",
+        "buildings": "Alter Hall, Cohen Center, Health United Building",
+        "isFeatured": false,
+        "isFavorite": false,
+        "image_url": "https://www.xavier.edu/msn-direct-entry//images/msn-panel1.jpg",
+        "logo": "stethoscope"
+    },
+    {
+        "id": 3,
+        "name": "College of Professional Sciences",
+        "description": "The College of Professional Sciences is comprised of a vibrant and dedicated community of learners, educators, and support staff committed to preparing undergraduate and graduate students in education, health, and the social sciences. Our college is Magis-in-Service as we are women and men for others meeting the needs of people and organizations in our community and beyond.  We seek to broaden our reach through collaborative practice and partnerships, whereby faculty, staff, and students from a variety of disciplines collaborate to find innovative solutions to better serve the world around us.  Our programs focus on shaping the future of our disciplines and leading our professions. ",
+        "buildings": "Alter Hall, Cohen Center, Health United Building",
+        "isFeatured": false,
+        "isFavorite": false,
+        "image_url": "https://www.xavier.edu/college-of-professional-sciences/images/xuxu3656.jpg",
+        "logo": "flask"
+    }
+]

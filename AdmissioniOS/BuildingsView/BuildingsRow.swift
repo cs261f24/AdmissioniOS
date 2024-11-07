@@ -11,12 +11,31 @@ struct BuildingsRow: View {
     var building: Building
     
     var body: some View {
-        Text(building.name)
-
+        
+        HStack {
+            AsyncImage(url: URL(string: building.image_url)) { image in
+                image.resizable()
+                    .cornerRadius(4.0)
+            }
+            placeholder: {
+                ProgressView()
+            }
+            .frame(width: 50, height: 50)
+            .padding(.trailing, 10)
+            Text(building.name)
+            
+            Spacer()
+            
+        }
     }
 }
 
 #Preview {
-    BuildingsRow(building: buildings[0])
-    BuildingsRow(building: buildings[1])
+    let buildings = ModelData().buildings
+    return Group {
+        BuildingsRow(building: buildings[0])
+        BuildingsRow(building: buildings[1])
+    }
+    
 }
+
