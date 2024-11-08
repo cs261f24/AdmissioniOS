@@ -16,7 +16,7 @@ struct BuildingViewModel: Identifiable {
     
     var id: Int { building.id }
     var name: String { building.name }
-    var yearBuilt: Int { building.year_built }
+    var yearBuilt: String { building.year_built }
     var description: String { building.description }
     var imageURL: String { building.image_url }
     var locationCoordinates: CLLocationCoordinate2D { building.locationCoordinate }
