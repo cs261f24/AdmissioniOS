@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		721F925C2CC16BE900CE2231 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F925B2CC16BE900CE2231 /* FavoriteButton.swift */; };
-		721F92612CC2E81B00CE2231 /* RoutesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F92602CC2E81B00CE2231 /* RoutesRow.swift */; };
-		721F92652CC2E88200CE2231 /* Colleges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721F92642CC2E88200CE2231 /* Colleges.swift */; };
+		7122BE452CDD3E8100B2D407 /* Colleges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122BE442CDD3E8100B2D407 /* Colleges.swift */; };
+		7122BE4A2CDD3F2800B2D407 /* RoutesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122BE482CDD3F2800B2D407 /* RoutesRow.swift */; };
+		7122BE4B2CDD3F2800B2D407 /* RoutesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122BE472CDD3F2800B2D407 /* RoutesList.swift */; };
+		7122BE4C2CDD3F2800B2D407 /* RoutesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122BE462CDD3F2800B2D407 /* RoutesDetail.swift */; };
+		717B67A72CDD427E00619541 /* Routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 717B67A62CDD427E00619541 /* Routes.json */; };
+		719DCF732CD54E2A008FBDB1 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DCF692CD54E2A008FBDB1 /* ImageView.swift */; };
+		719DCF752CD54E2A008FBDB1 /* ImageViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DCF6D2CD54E2A008FBDB1 /* ImageViewTwo.swift */; };
+		719DCF762CD54E2A008FBDB1 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DCF682CD54E2A008FBDB1 /* FavoriteButton.swift */; };
+		71C795C52CCC166700AB0C92 /* BuildingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C795C42CCC166700AB0C92 /* BuildingViewModel.swift */; };
 		72289BA92CB84B4900349132 /* AdmissioniOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */; };
 		72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA22CB84B4900349132 /* BuildingsView.swift */; };
 		72289BAB2CB84B4900349132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BA32CB84B4900349132 /* ContentView.swift */; };
@@ -26,17 +32,18 @@
 		72289BC52CB84C1500349132 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC32CB84C1500349132 /* ModelData.swift */; };
 		72289BC62CB84C1500349132 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC22CB84C1500349132 /* Building.swift */; };
 		72289BCA2CB84CD500349132 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC92CB84CD500349132 /* Item.swift */; };
-		727C0A4B2CCC1E9100F39550 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C0A4A2CCC1E9100F39550 /* ImageView.swift */; };
-		72CA8A6E2CC812CF006E7B39 /* Routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 72CA8A6D2CC812CF006E7B39 /* Routes.json */; };
-		72CA8A722CC81BF8006E7B39 /* RoutesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA8A712CC81BF8006E7B39 /* RoutesList.swift */; };
-		72CA8A742CC81CCA006E7B39 /* RoutesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA8A732CC81CCA006E7B39 /* RoutesDetail.swift */; };
-		72CA8A762CCAC061006E7B39 /* ImageViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA8A752CCAC061006E7B39 /* ImageViewTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		721F925B2CC16BE900CE2231 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
-		721F92602CC2E81B00CE2231 /* RoutesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesRow.swift; sourceTree = "<group>"; };
-		721F92642CC2E88200CE2231 /* Colleges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colleges.swift; sourceTree = "<group>"; };
+		7122BE442CDD3E8100B2D407 /* Colleges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colleges.swift; sourceTree = "<group>"; };
+		7122BE462CDD3F2800B2D407 /* RoutesDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesDetail.swift; sourceTree = "<group>"; };
+		7122BE472CDD3F2800B2D407 /* RoutesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesList.swift; sourceTree = "<group>"; };
+		7122BE482CDD3F2800B2D407 /* RoutesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesRow.swift; sourceTree = "<group>"; };
+		717B67A62CDD427E00619541 /* Routes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Routes.json; sourceTree = "<group>"; };
+		719DCF682CD54E2A008FBDB1 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		719DCF692CD54E2A008FBDB1 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		719DCF6D2CD54E2A008FBDB1 /* ImageViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewTwo.swift; sourceTree = "<group>"; };
+		71C795C42CCC166700AB0C92 /* BuildingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewModel.swift; sourceTree = "<group>"; };
 		72289B832CB84A9000349132 /* AdmissioniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmissioniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72289B9E2CB84B4900349132 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmissioniOSApp.swift; sourceTree = "<group>"; };
@@ -54,11 +61,6 @@
 		72289BC22CB84C1500349132 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		72289BC32CB84C1500349132 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		72289BC92CB84CD500349132 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		727C0A4A2CCC1E9100F39550 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		72CA8A6D2CC812CF006E7B39 /* Routes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Routes.json; sourceTree = "<group>"; };
-		72CA8A712CC81BF8006E7B39 /* RoutesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesList.swift; sourceTree = "<group>"; };
-		72CA8A732CC81CCA006E7B39 /* RoutesDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesDetail.swift; sourceTree = "<group>"; };
-		72CA8A752CCAC061006E7B39 /* ImageViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewTwo.swift; sourceTree = "<group>"; };
 		EB65C4F82CB99A97008B84C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,24 +75,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		721F925A2CC16B8F00CE2231 /* Helpers */ = {
+		7122BE492CDD3F2800B2D407 /* RoutesView */ = {
 			isa = PBXGroup;
 			children = (
-				72CA8A752CCAC061006E7B39 /* ImageViewTwo.swift */,
-				727C0A4A2CCC1E9100F39550 /* ImageView.swift */,
-				721F925B2CC16BE900CE2231 /* FavoriteButton.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		721F925F2CC2E80400CE2231 /* RoutesView */ = {
-			isa = PBXGroup;
-			children = (
-				721F92602CC2E81B00CE2231 /* RoutesRow.swift */,
-				72CA8A712CC81BF8006E7B39 /* RoutesList.swift */,
-				72CA8A732CC81CCA006E7B39 /* RoutesDetail.swift */,
+				7122BE462CDD3F2800B2D407 /* RoutesDetail.swift */,
+				7122BE472CDD3F2800B2D407 /* RoutesList.swift */,
+				7122BE482CDD3F2800B2D407 /* RoutesRow.swift */,
 			);
 			path = RoutesView;
+			sourceTree = "<group>";
+		};
+		719DCF712CD54E2A008FBDB1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				719DCF682CD54E2A008FBDB1 /* FavoriteButton.swift */,
+				719DCF692CD54E2A008FBDB1 /* ImageView.swift */,
+				719DCF6D2CD54E2A008FBDB1 /* ImageViewTwo.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		72289B7A2CB84A9000349132 = {
@@ -128,13 +130,14 @@
 				72289BA52CB84B4900349132 /* MapView.swift */,
 				72289BA32CB84B4900349132 /* ContentView.swift */,
 				72289BA62CB84B4900349132 /* MoreView.swift */,
+				7122BE492CDD3F2800B2D407 /* RoutesView */,
 				72289BA72CB84B4900349132 /* RoutesView.swift */,
-				721F925F2CC2E80400CE2231 /* RoutesView */,
-				721F925A2CC16B8F00CE2231 /* Helpers */,
+				719DCF712CD54E2A008FBDB1 /* Helpers */,
 				72289BC42CB84C1500349132 /* Model */,
 				72289BBA2CB84B9A00349132 /* Resources */,
 				72289BA12CB84B4900349132 /* Assets.xcassets */,
 				72289B9F2CB84B4900349132 /* Preview Content */,
+				71C795C42CCC166700AB0C92 /* BuildingViewModel.swift */,
 			);
 			path = AdmissioniOS;
 			sourceTree = "<group>";
@@ -153,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				72289BB92CB84B9A00349132 /* XavierBuildings.json */,
-				72CA8A6D2CC812CF006E7B39 /* Routes.json */,
+				717B67A62CDD427E00619541 /* Routes.json */,
 				72289BC92CB84CD500349132 /* Item.swift */,
 			);
 			path = Resources;
@@ -163,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				72289BC22CB84C1500349132 /* Building.swift */,
-				721F92642CC2E88200CE2231 /* Colleges.swift */,
+				7122BE442CDD3E8100B2D407 /* Colleges.swift */,
 				72289BC32CB84C1500349132 /* ModelData.swift */,
 			);
 			path = Model;
@@ -231,7 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72289BBB2CB84B9A00349132 /* XavierBuildings.json in Resources */,
-				72CA8A6E2CC812CF006E7B39 /* Routes.json in Resources */,
+				717B67A72CDD427E00619541 /* Routes.json in Resources */,
 				72289BB02CB84B4900349132 /* Preview Assets.xcassets in Resources */,
 				72289BB12CB84B4900349132 /* Assets.xcassets in Resources */,
 			);
@@ -245,25 +248,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				72289BC52CB84C1500349132 /* ModelData.swift in Sources */,
-				721F92652CC2E88200CE2231 /* Colleges.swift in Sources */,
+				7122BE452CDD3E8100B2D407 /* Colleges.swift in Sources */,
 				72289BC62CB84C1500349132 /* Building.swift in Sources */,
 				72289BA92CB84B4900349132 /* AdmissioniOSApp.swift in Sources */,
-				721F925C2CC16BE900CE2231 /* FavoriteButton.swift in Sources */,
-				721F92612CC2E81B00CE2231 /* RoutesRow.swift in Sources */,
 				72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */,
 				72289BCA2CB84CD500349132 /* Item.swift in Sources */,
+				719DCF732CD54E2A008FBDB1 /* ImageView.swift in Sources */,
+				719DCF752CD54E2A008FBDB1 /* ImageViewTwo.swift in Sources */,
+				719DCF762CD54E2A008FBDB1 /* FavoriteButton.swift in Sources */,
+				71C795C52CCC166700AB0C92 /* BuildingViewModel.swift in Sources */,
 				72289BAB2CB84B4900349132 /* ContentView.swift in Sources */,
 				72289BAC2CB84B4900349132 /* MainView.swift in Sources */,
-				72CA8A722CC81BF8006E7B39 /* RoutesList.swift in Sources */,
-				727C0A4B2CCC1E9100F39550 /* ImageView.swift in Sources */,
-				72CA8A742CC81CCA006E7B39 /* RoutesDetail.swift in Sources */,
 				72289BAD2CB84B4900349132 /* MapView.swift in Sources */,
 				72289BB62CB84B7C00349132 /* BuildingsDetail.swift in Sources */,
 				72289BB72CB84B7C00349132 /* BuildingsRow.swift in Sources */,
 				72289BB82CB84B7C00349132 /* BuildingsList.swift in Sources */,
-				72CA8A762CCAC061006E7B39 /* ImageViewTwo.swift in Sources */,
 				72289BAE2CB84B4900349132 /* MoreView.swift in Sources */,
 				72289BAF2CB84B4900349132 /* RoutesView.swift in Sources */,
+				7122BE4A2CDD3F2800B2D407 /* RoutesRow.swift in Sources */,
+				7122BE4B2CDD3F2800B2D407 /* RoutesList.swift in Sources */,
+				7122BE4C2CDD3F2800B2D407 /* RoutesDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
