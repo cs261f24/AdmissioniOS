@@ -51,13 +51,15 @@ struct MapView: View {
     
     @StateObject private var locationManager = LocationManager()
     @State private var selectedCollege: College = .GeneralTour
+    @State private var selectedBuilding: BuildingViewModel? // track selected building
+    @State private var showBuildingDetail = false // track navigation trigger
     
     let collegeToBuildings: [College: [String]] = [
-        .GeneralTour: ["Albers Hall", "Schott Hall", "Our Lady Of Peace Chapel", "Edgecliff Hall", "Schmidt Hall", "Hinkle Hall", "McDonald Library", "Alter Hall", "Logan Hall", "Lindner Family Physics Building", "Hailstones Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Smith Hall", "Conaton Learning Commons"],
-        .CollegeofArtsandSciences: ["Smith Hall"],
-        .WilliamsCollegeofBusiness: ["Edgecliff Hall"],
-        .CollegeofProfessionalSciences: ["Logan Hall"],
-        .CollegeofNursing: ["Cohen Center", "Health United Building (HUB)"]
+        .GeneralTour: ["Schott Hall", "Our Lady Of Peace Chapel", "Edgecliff Hall", "Schmidt Hall", "Hinkle Hall", "McDonald Library", "Alter Hall","Albers Hall", "Logan Hall", "Lindner Family Physics Building", "Hailstones Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Smith Hall", "Conaton Learning Commons"],
+        .CollegeofArtsandSciences: ["Schott Hall", "Our Lady Of Peace Chapel", "Edgecliff Hall", "Schmidt Hall", "Hinkle Hall", "McDonald Library", "Alter Hall", "Albers Hall", "Logan Hall", "Lindner Family Physics Building", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Flynn Hall", "Hoff Dining Commons", "Conaton Learning Commons"],
+        .WilliamsCollegeofBusiness: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Flynn Hall", "Hoff Dining Commons", "Smith Hall", "Conaton Learning Commons"],
+        .CollegeofProfessionalSciences: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Conaton Learning Commons"],
+        .CollegeofNursing: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Conaton Learning Commons"]
     ]
     
     var body: some View {
@@ -76,7 +78,19 @@ struct MapView: View {
                     // Use BuildingViewModel with Map
                     // Loops through to populate map
                     ForEach(filteredBuildingViewModels, id: \.id) { building in
-                        Marker(building.name, coordinate: building.locationCoordinates)
+                        Annotation("", coordinate: building.locationCoordinates) {  // Add a label here
+                            VStack {
+                                Image(systemName: "building.2.fill") // Customize icon if desired
+                                    .foregroundColor(.blue)
+                                Text(building.name)
+                                    .font(.caption)
+                                    .foregroundColor(.primary)
+                            }
+                            .onTapGesture {
+                                selectedBuilding = building
+                                showBuildingDetail = true // triggers navigation
+                            }
+                        }
                     }
                 }
                 .onAppear {
@@ -98,6 +112,11 @@ struct MapView: View {
                     MapCompass()
                     MapScaleView()
                     MapPitchToggle()
+                }
+                .navigationDestination(isPresented: $showBuildingDetail) {
+                    if let building = selectedBuilding {
+                        BuildingsDetail(building: building.building)
+                    }
                 }
             }
         }
