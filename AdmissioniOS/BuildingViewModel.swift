@@ -11,8 +11,8 @@
 import Foundation
 import CoreLocation
 
-struct BuildingViewModel: Identifiable {
-    private let building: Building
+struct BuildingViewModel: Identifiable, Hashable {
+    let building: Building
     
     var id: Int { building.id }
     var name: String { building.name }
@@ -23,6 +23,15 @@ struct BuildingViewModel: Identifiable {
     
     init(building: Building) {
         self.building = building
+    }
+    
+    // to conform to Hashable
+    static func == (lhs: BuildingViewModel, rhs: BuildingViewModel) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher){
+        hasher.combine(id)
     }
     
 }
