@@ -82,10 +82,18 @@ struct MapView: View {
                     
                     // Use BuildingViewModel with Map
                     // Loops through to populate map
-                    ForEach(filteredBuildingViewModels, id: \.id) { building in
-                        Marker(building.name, coordinate: building.locationCoordinates)
-
-                    }
+                    ForEach(Array(filteredBuildingViewModels.enumerated()), id: \.element.id) { index, building in
+                            Annotation(building.name, coordinate: building.locationCoordinates) {
+                                VStack {
+                                    // Display the number for each building based on its order
+                                    Text("\(index + 1)") // Sequential number starting from 1
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding(6)
+                                        .background(Circle().fill(Color.blue))
+                                }
+                            }
+                        }
                 }
                 .onAppear {
                     locationManager.requestWhenInUseAuthorization()
