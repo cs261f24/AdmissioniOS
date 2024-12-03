@@ -94,6 +94,13 @@ struct MapView: View {
                                         .padding(6)
                                         .background(Circle().fill(Color.blue))
                                 }
+
+
+                                .onTapGesture {
+                                                                selectedBuilding = building
+                                                                showBuildingDetail = true // triggers navigation
+                                                            }
+
                             }
                         }
                 }
