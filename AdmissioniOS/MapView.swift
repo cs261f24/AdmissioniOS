@@ -66,6 +66,11 @@ struct MapView: View {
         .CollegeofNursing: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Conaton Learning Commons"]
     ]
     
+    let mapBoundaryRegion = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 39.149843, longitude: -84.474057),
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        )
+    
     var body: some View {
 
         
@@ -79,7 +84,14 @@ struct MapView: View {
             .pickerStyle(MenuPickerStyle())
             
             NavigationStack {
-                Map(position: $cameraPosition, interactionModes: .all) {
+                
+                let cameraBounds = MapCameraBounds(
+                                    centerCoordinateBounds: mapBoundaryRegion,
+                                    minimumDistance: 500, // Minimum zoom distance
+                                    maximumDistance: 5000 // Maximum zoom distance
+                                )
+                
+                Map(position: $cameraPosition, bounds: cameraBounds, interactionModes: .all) {
                     UserAnnotation()
                     
                     // Use BuildingViewModel with Map
@@ -95,12 +107,13 @@ struct MapView: View {
                                         .background(Circle().fill(Color.blue))
                                 }
                                 .onTapGesture {
-                                                                selectedBuilding = building
-                                                                showBuildingDetail = true // triggers navigation
-                                                            }
+                                    selectedBuilding = building
+                                    showBuildingDetail = true // triggers navigation
+                                }
                             }
                         }
                 }
+                         
                 .onAppear {
                     locationManager.requestWhenInUseAuthorization()
                     locationManager.startUpdatingLocation()
