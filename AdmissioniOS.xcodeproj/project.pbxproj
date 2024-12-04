@@ -32,6 +32,9 @@
 		72289BC52CB84C1500349132 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC32CB84C1500349132 /* ModelData.swift */; };
 		72289BC62CB84C1500349132 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC22CB84C1500349132 /* Building.swift */; };
 		72289BCA2CB84CD500349132 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72289BC92CB84CD500349132 /* Item.swift */; };
+		EAD1EBAD2D00A88300444784 /* WelcomeViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD1EBAC2D00A87900444784 /* WelcomeViewTwo.swift */; };
+		EAD1EBAF2D00A8DF00444784 /* xavier-logo-moreblue.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD1EBAE2D00A8DF00444784 /* xavier-logo-moreblue.png */; };
+		EAD1EBB12D00C20E00444784 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD1EBB02D00C20E00444784 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		72289BC22CB84C1500349132 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		72289BC32CB84C1500349132 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		72289BC92CB84CD500349132 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EAD1EBAC2D00A87900444784 /* WelcomeViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewTwo.swift; sourceTree = "<group>"; };
+		EAD1EBAE2D00A8DF00444784 /* xavier-logo-moreblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xavier-logo-moreblue.png"; sourceTree = "<group>"; };
+		EAD1EBB02D00C20E00444784 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		EB65C4F82CB99A97008B84C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +104,7 @@
 		72289B7A2CB84A9000349132 = {
 			isa = PBXGroup;
 			children = (
+				EAD1EBB02D00C20E00444784 /* Launch Screen.storyboard */,
 				72289BA82CB84B4900349132 /* AdmissioniOS */,
 				72289B842CB84A9000349132 /* Products */,
 			);
@@ -125,6 +132,7 @@
 				EB65C4F82CB99A97008B84C9 /* Info.plist */,
 				72289BA02CB84B4900349132 /* AdmissioniOSApp.swift */,
 				72289BA42CB84B4900349132 /* MainView.swift */,
+				EAD1EBAC2D00A87900444784 /* WelcomeViewTwo.swift */,
 				72289BA22CB84B4900349132 /* BuildingsView.swift */,
 				72289BB52CB84B7C00349132 /* BuildingsView */,
 				72289BA52CB84B4900349132 /* MapView.swift */,
@@ -136,6 +144,7 @@
 				72289BC42CB84C1500349132 /* Model */,
 				72289BBA2CB84B9A00349132 /* Resources */,
 				72289BA12CB84B4900349132 /* Assets.xcassets */,
+				EAD1EBAE2D00A8DF00444784 /* xavier-logo-moreblue.png */,
 				72289B9F2CB84B4900349132 /* Preview Content */,
 				71C795C42CCC166700AB0C92 /* BuildingViewModel.swift */,
 			);
@@ -233,8 +242,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD1EBB12D00C20E00444784 /* Launch Screen.storyboard in Resources */,
 				72289BBB2CB84B9A00349132 /* XavierBuildings.json in Resources */,
 				717B67A72CDD427E00619541 /* Routes.json in Resources */,
+				EAD1EBAF2D00A8DF00444784 /* xavier-logo-moreblue.png in Resources */,
 				72289BB02CB84B4900349132 /* Preview Assets.xcassets in Resources */,
 				72289BB12CB84B4900349132 /* Assets.xcassets in Resources */,
 			);
@@ -249,6 +260,7 @@
 			files = (
 				72289BC52CB84C1500349132 /* ModelData.swift in Sources */,
 				7122BE452CDD3E8100B2D407 /* Colleges.swift in Sources */,
+				EAD1EBAD2D00A88300444784 /* WelcomeViewTwo.swift in Sources */,
 				72289BC62CB84C1500349132 /* Building.swift in Sources */,
 				72289BA92CB84B4900349132 /* AdmissioniOSApp.swift in Sources */,
 				72289BAA2CB84B4900349132 /* BuildingsView.swift in Sources */,
