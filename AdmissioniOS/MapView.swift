@@ -84,21 +84,22 @@ struct MapView: View {
                     
                     // Use BuildingViewModel with Map
                     // Loops through to populate map
-                    ForEach(filteredBuildingViewModels, id: \.id) { building in
-                        Annotation("", coordinate: building.locationCoordinates) {  // Add a label here
-                            VStack {
-                                Image(systemName: "building.2.fill") // Customize icon if desired
-                                    .foregroundColor(.blue)
-                                Text(building.name)
-                                    .font(.caption)
-                                    .foregroundColor(.primary)
-                            }
-                            .onTapGesture {
-                                selectedBuilding = building
-                                showBuildingDetail = true // triggers navigation
+                    ForEach(Array(filteredBuildingViewModels.enumerated()), id: \.element.id) { index, building in
+                            Annotation(building.name, coordinate: building.locationCoordinates) {
+                                VStack {
+                                    // Display the number for each building based on its order
+                                    Text("\(index + 1)") // Sequential number starting from 1
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding(6)
+                                        .background(Circle().fill(Color.blue))
+                                }
+                                .onTapGesture {
+                                                                selectedBuilding = building
+                                                                showBuildingDetail = true // triggers navigation
+                                                            }
                             }
                         }
-                    }
                 }
                 .onAppear {
                     locationManager.requestWhenInUseAuthorization()
@@ -172,5 +173,3 @@ struct ContentView_Previews: PreviewProvider {
         MapView()
     }
 }
-
-
