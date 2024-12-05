@@ -20,6 +20,7 @@ struct BuildingViewModel: Identifiable, Hashable {
     var description: String { building.description }
     var imageURL: String { building.image_url }
     var locationCoordinates: CLLocationCoordinate2D { building.locationCoordinate }
+    var colleges: [String] { building.colleges }
     
     init(building: Building) {
         self.building = building
