@@ -10,14 +10,7 @@ import MapKit
 import SwiftData
 
 
-// College Enum as in the original code
-enum College: String, CaseIterable {
-    case GeneralTour = "General Tour"
-    case CollegeofArtsandSciences = "College of Arts and Sciences"
-    case CollegeofNursing = "College of Nursing"
-    case WilliamsCollegeofBusiness = "Williams College of Business"
-    case CollegeofProfessionalSciences = "College of Professional Sciences"
-}
+
 
 
 
@@ -25,22 +18,25 @@ enum College: String, CaseIterable {
 // Loads building data from json file
 class BuildingDataLoader: ObservableObject {
     @Published var buildingViewModels: [BuildingViewModel] = []
+    @Published var colleges: [String] = []
     
     init() {
         loadBuildings()
     }
     
     private func loadBuildings() {
-        if let url = Bundle.main.url(forResource: "XavierBuildings", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let buildings = try JSONDecoder().decode([Building].self, from: data)
-                buildingViewModels = buildings.map { BuildingViewModel(building: $0) }
-            } catch {
-                print("Error loading or decoding XavierBuildings.json: \(error)")
+            if let url = Bundle.main.url(forResource: "XavierBuildings", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
+                    let buildings = try JSONDecoder().decode([Building].self, from: data)
+                    buildingViewModels = buildings.map { BuildingViewModel(building: $0) }
+                    // Dynamically extract unique colleges
+                    colleges = Array(Set(buildings.flatMap { $0.colleges })).sorted()
+                } catch {
+                    print("Error loading or decoding XavierBuildings.json: \(error)")
+                }
             }
         }
-    }
 }
 
 
@@ -54,17 +50,11 @@ struct MapView: View {
     )
     
     @StateObject private var locationManager = LocationManager()
-    @State private var selectedCollege: College = .GeneralTour
+    @State private var selectedCollege: String = "General Tour"
     @State private var selectedBuilding: BuildingViewModel? // track selected building
     @State private var showBuildingDetail = false // track navigation trigger
-    
-    let collegeToBuildings: [College: [String]] = [
-        .GeneralTour: ["Schott Hall", "Our Lady Of Peace Chapel", "Edgecliff Hall", "Schmidt Hall", "Hinkle Hall", "McDonald Library", "Alter Hall","Albers Hall", "Logan Hall", "Lindner Family Physics Building", "Hailstones Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Smith Hall", "Conaton Learning Commons"],
-        .CollegeofArtsandSciences: ["Schott Hall", "Our Lady Of Peace Chapel", "Edgecliff Hall", "Schmidt Hall", "Hinkle Hall", "McDonald Library", "Alter Hall", "Albers Hall", "Logan Hall", "Lindner Family Physics Building", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Flynn Hall", "Hoff Dining Commons", "Conaton Learning Commons"],
-        .WilliamsCollegeofBusiness: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Flynn Hall", "Hoff Dining Commons", "Smith Hall", "Conaton Learning Commons"],
-        .CollegeofProfessionalSciences: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Conaton Learning Commons"],
-        .CollegeofNursing: ["Schott Hall", "Our Lady Of Peace Chapel", "Schmidt Hall", "McDonald Library", "Alter Hall", "Bellarmine Chapel", "Gallagher Student Center", "Brockman Hall", "Buenger Residence Hall", "Kuhlman Residence Hall", "Husman Residence Hall", "Cintas Center", "Cohen Center", "Flynn Hall", "Health United Building (HUB)", "Hoff Dining Commons", "Conaton Learning Commons"]
-    ]
+        
+   
     
     let mapBoundaryRegion = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 39.149843, longitude: -84.474057),
@@ -76,11 +66,11 @@ struct MapView: View {
         
 
         VStack {
-            Picker("Select College", selection: $selectedCollege) {
-                ForEach(College.allCases, id: \.self) { college in
-                    Text(college.rawValue).tag(college)
-                }
-            }
+                    Picker("Select College", selection: $selectedCollege) {
+                        ForEach(buildingDataLoader.colleges, id: \.self) { college in
+                            Text(college).tag(college)
+                        }
+                    }
             .pickerStyle(MenuPickerStyle())
             
             NavigationStack {
@@ -147,9 +137,8 @@ struct MapView: View {
 
     // helps determine what set of buildings to display
     private var filteredBuildingViewModels: [BuildingViewModel] {
-        guard let buildingNames = collegeToBuildings[selectedCollege] else { return [] }
-        return buildingDataLoader.buildingViewModels.filter { buildingNames.contains($0.name) }
-    }
+            buildingDataLoader.buildingViewModels.filter { $0.colleges.contains(selectedCollege) }
+        }
 }
 
 

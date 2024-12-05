@@ -17,6 +17,7 @@ struct Building: Hashable, Codable, Identifiable {
     var description: String
     var image_url: String
     var isFavorite: Bool
+    var colleges: [String]
     
     private var coordinates: Coordinates
     
